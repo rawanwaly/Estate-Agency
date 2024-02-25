@@ -1,0 +1,268 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: cursive;
+}
+.container
+{
+    margin: 0 auto;
+    max-width: 1250px;
+    width: 100%;
+}
+.row
+{
+    display: flex;
+}
+/*********** NavBar *****/
+.navbar .row
+{
+    justify-content:space-between;
+    align-items: center;
+}
+.navbar
+{
+    padding: 10px ;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 2px rgba(0,0,0,.4);
+    z-index: 3;
+}
+.logo
+{
+    font-size: 1.6em;
+}
+.logo span
+{
+    color: seagreen;
+    padding-left: 5px;
+}
+.links
+{
+    display: flex;
+}
+.links > li
+{
+    list-style: none;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+.links li a
+{
+    text-decoration: none;
+    color: #232323;
+}
+.dropdown
+{
+    position: relative;
+}
+.dropdown .menu
+{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 15px);
+    box-shadow: 0 0 2px rgba(0,0,0,.4);
+    width: 150%;
+    display: none;
+    background-color: #fff;
+}
+.dropdown .menu a
+{
+    padding: 0 10px;
+    margin: 3px 0;
+    display: inline-block;
+}
+.dropdown > a:hover ~ .menu
+{
+    display: block;
+}
+/*** Header ***/
+.header
+{
+    padding: 30px 0;
+}
+.header .container 
+{
+    border-left: 2px solid seagreen ;
+}
+.header .row
+{
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .text
+{
+    padding-left: 20px;
+}
+.header .container .text h3
+{
+    font-size: 1.7em;
+}
+.header .container .text p
+{
+    color: #777;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+.gallery .row
+{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.gallery .box
+{
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    padding: 5px;
+    width: 32.3%;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.gallery .box img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .overlay
+{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: seagreen;
+    padding: 20px;
+    clip-path: circle(0% at 100% 0 );
+    transition: clip-path .5s ease-in-out;
+}
+.gallery .box:hover .overlay
+{
+    clip-path: circle(150% at 100% 0 );
+}
+.gallery h2
+{
+    color: #fff;
+}
+.gallery p
+{
+    color: #eee;
+    margin :7px 0;
+}
+.social 
+{
+    color: #fff;
+    display: flex;
+    margin-top: 20px;
+}
+.social i
+{
+    margin-right: auto;
+}
+footer
+{
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+footer .row
+{
+    justify-content: space-between;
+}
+footer .row > div
+{
+    width: 31%;
+}
+footer .row > div ul
+{
+    width: 31%;
+    margin-left: 20px;
+}
+footer .row > div:first-of-type p
+{
+    width: 80%;
+    margin: 10px 0;
+}
+.pagination
+{
+    margin-left: auto;
+    width: fit-content;
+}
+.pagination a
+{
+    color: #333;
+    text-decoration: none;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px rgba(0,0,0,.4);
+}
+.pagination a.active
+{
+    color: #fff;
+    background-color: seagreen;
+}
+.footer
+{
+    text-align: center;
+    padding : 10px 0;
+}
+.footer i
+{
+    margin: 0 10px;
+}
+.gallery-header
+{
+    background:url(../img/slide-3.jpg) center center/cover no-repeat;
+    margin: 50px 0;
+}
+.gallery-header > *
+{
+    color: #fff;
+}
+.gallery-tabs .row
+{
+    justify-content: center;
+}
+.gallery-tabs
+{
+    margin: 20px 0;
+}
+.gallery-tabs .tab
+{
+    padding: 5px;
+    margin: 0 10px;
+}
+.gallery-tabs .tab.active
+{
+    color: seagreen;
+}
+.gallery-boxes .box
+{
+    display: none;
+}
+.gallery-boxes .box.active
+{
+    display: block;
+    animation: animation .5s;
+}
+@keyframes animation {
+    0%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+    
+}
